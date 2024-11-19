@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .header {
+            background-color: #007bff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 5px solid #28a745;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #fff;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #fff;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            width: calc(50% - 20px);
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #007bff;
+        }
+
+        .product-rating {
+            margin: 10px 0;
+        }
+
+        .star-rating {
+            font-size: 1.5em;
+            color: gold;
+        }
+
+        .product-rating span {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .view-product-button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px 0;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-product-button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+        .customer-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            max-width: 280px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .customer-notification.hidden {
+            display: none;
+        }
+
+        .customer-notification p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- رأس الصفحة يحتوي على اسم ولوجو التطبيق -->
+<div class="header">
+    <img src="https://i.suar.me/jMV41/l" alt="family shop">
+    <h1>family shop</h1>
+</div>
+
+<div class="container">
+    <!-- المنتج 1 -->
+    <div class="product">
+        <img src="https://i.suar.me/aMQyK/l" alt="المنتج 1">
+        <div class="product-info">
+            <div class="product-title">الشريط اللاسق</div>
+            <div class="product-rating">
+                <div class="star-rating">★★★★☆</div>
+                <span>240K زبون</span>
+            </div>
+            <a href="go:charit" class="view-product-button">اضغط لمشاهدة المنتج</a>
+        </div>
+    </div>
+    
+    <!-- المنتج 2 -->
+    <div class="product">
+        <img src="https://i.suar.me/3G4ym/l" alt="المنتج 2">
+        <div class="product-info">
+            <div class="product-title">قفل الثلاجة</div>
+            <div class="product-rating">
+                <div class="star-rating">★★★★☆</div>
+                <span>180K زبون</span>
+            </div>
+            <a href="go:9ofl" class="view-product-button">اضغط لمشاهدة المنتج</a>
+        </div>
+    </div>
+    
+    <!-- المنتج 3 -->
+    <div class="product">
+        <img src="https://i.suar.me/8GA6L/l" alt="المنتج 3">
+        <div class="product-info">
+            <div class="product-title">نشاف السحري</div>
+            <div class="product-rating">
+                <div class="star-rating">★★★★★</div>
+                <span>310K زبون</span>
+            </div>
+            <a href="product3.html" class="view-product-button">اضغط لمشاهدة المنتج</a>
+        </div>
+    </div>
+    
+    <!-- المنتج 4 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/400x300" alt="المنتج 4">
+        <div class="product-info">
+            <div class="product-title">المنتج 4</div>
+            <div class="product-rating">
+                <div class="star-rating">★★★☆☆</div>
+                <span>150K زبون</span>
+            </div>
+            <a href="product4.html" class="view-product-button">اضغط لمشاهدة المنتج</a>
+        </div>
+    </div>
+</div>
+
+<!-- إشعار الزبائن -->
+<div id="customer-notification" class="customer-notification hidden">
+    <p id="customer-name">أحمد علي اشترى منتجاً الآن!</p>
+</div>
+
+<script>
+    // قائمة بأسماء الزبائن
+    const customers = [
+        "امال من عنابة",
+        " سارة من الوادي",
+        "احلام من الجزائر",
+        " فاطمة الزهراء من وهران",
+        "فتيحة من ميلة",
+        "ام اولادي من الشلف",
+    ];
+
+    let currentCustomerIndex = 0;
+
+    function updateCustomerNotification() {
+        const customerName = customers[currentCustomerIndex];
+        document.getElementById('customer-name').textContent = `${customerName} اشترت منتجاً الآن!`;
+        currentCustomerIndex = (currentCustomerIndex + 1) % customers.length;
+    }
+
+    function showNotification() {
+        const notification = document.getElementById('customer-notification');
+        notification.classList.remove('hidden');
+        setTimeout(() => {
+            notification.classList.add('hidden');
+        }, 3000); // يظهر لمدة 3 ثوانٍ
+    }
+
+    function rotateNotifications() {
+        updateCustomerNotification();
+        showNotification();
+        setTimeout(rotateNotifications, 5000); // يتم التحديث كل 5 ثوانٍ
+    }
+
+    rotateNotifications(); // بدء التدوير
+</script>
+
+</body>
+</html>
